@@ -1,0 +1,278 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #ffffff;
+}
+
+.container2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #ffffff8a;
+    }
+
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: rgb(255, 255, 255);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not()::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #080e17;
+    padding: 10px;
+    border: 1px solid #080e17;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav ul ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul ul li a:hover {
+    color: #ff0202;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 86px;
+    color: black;
+}
+
+.sobre {
+    color: white;
+    background-color: black;
+}
+
+.sobre .sobre-text h3 {
+    color: white;
+}
+
+.sobre .sobre-text p {
+    color: rgb(173, 173, 173)
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 100px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+table {
+    width: 60%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+table td {
+    padding: 8px 15px;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+table tr:first-child td {
+    background-color: #444;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) td {
+    background-color: #555;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #666;
+}
+
+table td:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.footer p {
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+/*sistema*/
+
+.sistema {
+    font-size: 10px;
+    width: 640px;
+    height: 640px;
+    position: relative;
+    display: flex; 
+    margin: 0 auto;
+}
+
+.sun {
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    width: 160px;
+    height: 160px;
+    background-color: #ffea00;
+    border-radius: 50%;
+    box-shadow: 0 0 48px #ffea00;
+}
+
+.earth, .moon {
+    position: absolute;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    border-width: 1.6px 1.6px 0 0;
+    border-radius: 50%;
+}
+
+.earth {
+    top: 80px;
+    left: 80px;
+    width: 480px;
+    height: 480px;
+    animation: orbit 36.5s linear infinite;
+}
+
+.moon {
+    top: 0;
+    right: 0;
+    width: 128px;
+    height: 128px;
+    animation: orbit 22.7s linear infinite;
+}
+
+.earth::before, .moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 44.8px;
+    right: 44.8px;
+    width: 48px;
+    height: 48px;
+    background-color: aqua;
+}
+
+.moon::before {
+    top: 12.8px;
+    right: 3.2px;
+    width: 19.2px;
+    height: 19.2px;
+    background-color: silver;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}

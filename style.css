@@ -1,0 +1,455 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #000000;
+}
+
+.container2 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #ffffff8a;
+    }
+
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+.header {
+    background-image: url(/IMG/wallpaperearth.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: rgb(255, 255, 255);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not()::after {
+    content: "";
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #080e17;
+    padding: 10px;
+    border: 1px solid #080e17;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav ul ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul ul li a:hover {
+    color: #ff0202;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 86px;
+    color: rgb(255, 255, 255);
+}
+.banner .banner-text p {
+    color: white;
+}
+
+.teorias-text h4 {
+    color: white;
+}
+
+.teorias-text p {
+    color: rgb(173, 173, 173);
+}
+.filmes-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    min-height: 100vh;
+}
+.filmes-text h4 {
+    color: white;
+}
+
+.filmes-text p {
+    color: rgb(173, 173, 173);
+}
+.filmes-text .poster {
+    width: 200px;
+    height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.3);
+}
+
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.footer p {
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    color: white;
+    padding: 20px;
+}
+
+.formulario {
+    width: 90%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px; 
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario2 {
+    margin-bottom: 15px;
+}
+
+.formulario2 label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.formulario2 input,
+.formulario2 textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formulario2 textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #220462;
+}
+
+.sistema {
+    font-size: 6px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+    display: flex; 
+    margin: 0 auto;
+}
+
+img{
+    height: 130%;
+    width: 130%;
+}
+
+.sun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    box-shadow: 0 0 3em rgb(255, 128, 0);
+    animation: orbit 50s linear infinite;
+}
+
+.mercury,
+.venus,
+.earth,
+.moon,
+.mars,
+.jupiter,
+.saturn,
+.uranus,
+.neptune,
+.pluto {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.mercury {
+    top: 12.5em;
+    left: 12.5em;
+    width: 15em;
+    height: 15em;
+    animation: orbit 68.7s linear infinite;
+}
+
+.venus {
+    top: 10em;
+    left: 10em;
+    width: 20em;
+    height: 20em;
+    animation: orbit 48.7s linear infinite;
+}
+
+.earth {
+    top: 6em;
+    left: 6em;
+    width: 28em;
+    height: 28em; 
+    animation: orbit 36.5s linear infinite;   
+}
+.moon {
+    top: 2em;
+    right: -1em;
+    width: 7em;
+    height: 7em; 
+    animation: orbit 2.7s linear infinite;
+}
+
+.mars {
+    top: 2em;
+    left: 2.5em;
+    width: 36em;
+    height: 36em; 
+    animation: orbit 26.5s linear infinite;
+}
+
+.jupiter {
+    top: -2em;
+    left: -2em;
+    width: 45em;
+    height: 45em; 
+    animation: orbit 21s linear infinite;
+}
+
+.saturn {
+    top: -7em;
+    left: -7em;
+    width: 55em;
+    height: 55em; 
+    animation: orbit 17s linear infinite;
+}
+
+.uranus {
+    top: -12em;
+    left: -12em;
+    width: 65em;
+    height: 65em; 
+    animation: orbit 19s linear infinite;
+}
+
+.neptune {
+    top: -17em;
+    left: -17em;
+    width: 75em;
+    height: 75em; 
+    animation: orbit 15s linear infinite;
+}
+
+.pluto {
+    top: -22em;
+    left: -22em;
+    width: 85em;
+    height: 85em; 
+    animation: orbit 18s linear infinite;
+}
+
+.mercury::before,
+.venus::before,
+.earth::before,
+.moon::before,
+.mars::before,
+.jupiter::before,
+.saturn::before,
+.uranus::before,
+.neptune::before,
+.pluto::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: orbit 30s linear infinite;
+}
+
+.mercury::before {
+    top: 1.5em;
+    right: 0.8em;
+    width: 2em;
+    height: 2em;
+    background-image: url('/IMGSISTEMAHOME/mercury.png');
+    background-size: cover;
+}
+
+.venus::before {
+    top: 2em;
+    right: 2em;
+    width: 2em;
+    height: 2em;
+    background-image: url('/IMGSISTEMAHOME/venus.png');
+    background-size: cover;
+}
+
+.earth::before {
+    top: 3em;
+    right: 0em;
+    width: 5em;
+    height: 5em;
+    background-image: url('/IMGSISTEMAHOME/earth.png');
+    background-size: cover;
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url('/IMGSISTEMAHOME/moon.png');
+    background-size: cover;
+}
+
+.mars::before {
+    top: 5em;
+    right: 3em;
+    width: 3em;
+    height: 3em;
+    background-image: url('/IMGSISTEMAHOME/mars.png');
+    background-size: cover;
+}
+
+.jupiter::before {
+    top: 6em;
+    right: 3em;
+    width: 5em;
+    height: 5em;
+    background-image: url('/IMGSISTEMAHOME/jupiter.png');
+    background-size: cover;
+}
+
+.saturn::before {
+    top: 7.5em;
+    right: 5em;
+    width: 4.5em;
+    height: 4.5em;
+    background-image: url('/IMGSISTEMAHOME/saturn.png');
+    background-size: cover;
+}
+
+.uranus::before {
+    top: 9em;
+    right: 6.5em;
+    width: 4em;
+    height: 4em;
+    background-image: url('/IMGSISTEMAHOME/uranus.png');
+    background-size: cover;
+}
+
+.neptune::before {
+    top: 10em;
+    right: 8em;
+    width: 4em;
+    height: 4em;
+    background-image: url('/IMGSISTEMAHOME/neptune.png');
+    background-size: cover;
+}
+
+.pluto::before {
+    top: 11em;
+    right: 10em;
+    width: 4em;
+    height: 4em;
+    background-image: url('/IMGSISTEMAHOME/pluto.png');
+    background-size: cover;
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}

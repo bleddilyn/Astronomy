@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="/IMG/Design_sem_nome__1_-removebg-preview.png" />
+    <title>Contato</title>
+</head>
+
+<body>
+    <main>
+        <header class="header" style="background-image: url(/IMG/buraconegro.png);">
+            <div class="container1">
+                <nav>
+                    <ul class="ul">
+                        <a href="index.html">Home</a>
+                    </ul>
+                </nav>
+                <section class="banner">
+                    <div class="banner-text">
+                        <h1>C O N T A T O</h1>
+                    </div>
+                </section>
+            </div>
+        </header>
+
+        <section class="formulario">
+            <h2>Entre em Contato</h2>
+            <form action="/enviar" method="POST">
+                <div class="formulario2">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="formulario2">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formulario2">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>© Todos os direitos reservados 2024 - Astronomy</p>
+        </footer>
+    </main>
+</body>
+
+</html>
